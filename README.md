@@ -3,35 +3,80 @@
 #### 介绍
 vue项目的上拉刷新，下拉加载组件，已封装独立的控件。
 
-#### 软件架构
-软件架构说明
+#### 使用方法
 
+* 可将Scroll.vue复制到您的vue项目，到任何一个vue文件中，将以下示例代码复制到相应的模块即可试看效果。
+* 参考HomeMobile.vue代码。
 
-#### 安装教程
+```vue
+<Scroll class="scroll" 
+        downPullBackgroundColor="ghostwhite" 
+        @upPullEvent="onScrollUpPullEvent" 
+        @downPullEvent="onScrollDownPullEvent">
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+    <h1>dfasdfasdfa</h1>
+</Scroll>
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+<script>
+	import Scroll from "./Scroll.vue"
+	export default {
+		components: {
+			Scroll
+		},
+		methods: {
+			onScrollUpPullEvent() {
+				console.log("on scroll upPullEvent");
+			},
+			onScrollDownPullEvent() {
+				console.log("on scroll down refresh");
+			}
+		}
+	}
+</script>
+```
 
-#### 使用说明
+#### 属性说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+```vue
+props: [
+			'downPullHintText', // 下拉提示文本
+			'downPullReleaseText', // 下拉释放文本
+			'downPullLoadText', // 下拉加载文本
+			'downPullBackgroundColor', // 下拉背景颜色
+			'downPullFontColor', // 下拉字体颜色
+			'downPullFontSize' // 下拉字体大小
+		]
+```
 
-#### 参与贡献
+#### 事件说明
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+```vue
+@upPullEvent // 上拉事件：滚到到最底会触发本事件
+@downPullEvent // 下拉时间：下拉即可触发本事件
+```
 
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
